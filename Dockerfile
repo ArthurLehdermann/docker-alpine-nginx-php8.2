@@ -76,9 +76,9 @@ RUN apk add --no-cache php81-bcmath php81-bz2 php81-dom php81-exif php81-fileinf
 RUN apk add --no-cache --virtual build-essentials && \
     docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg --with-webp && \
     docker-php-ext-install bcmath bz2 curl dom exif fileinfo ftp gd gettext intl opcache phar \
-      pdo pdo_mysql pdo_pgsql shmop simplexml sockets sysvmsg sysvsem sysvshm xml xmlwriter zip && \
+      pdo pdo_mysql pdo_pgsql shmop simplexml sysvmsg sysvsem sysvshm xml xmlwriter zip && \
     docker-php-ext-enable bcmath bz2 curl dom exif fileinfo ftp gd gettext intl opcache phar \
-      pdo pdo_mysql pdo_pgsql shmop simplexml sockets sysvmsg sysvsem sysvshm xml xmlwriter zip
+      pdo pdo_mysql pdo_pgsql shmop simplexml sysvmsg sysvsem sysvshm xml xmlwriter zip
 
 # install imagick
 # use github version for now until release from https://pecl.php.net/get/imagick is ready for PHP 8
